@@ -27,7 +27,7 @@ grid-layout .fraction{
   overflow:hidden;
   color:rgb(125,25,25);
   background-color:rgb(10,100,255);
-  background-image:url("/wikikikker/images/news-fraction.png");
+  background-image:url("images/news-fraction.png");
   cursor:pointer;
   transition:background-color .4s linear;
 }
