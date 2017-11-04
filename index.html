@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="home">
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/index_ng.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/logo/logo-1.png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+<body ng-controller="body-ctrl" class="container-fluid" style="margin-top:{{navHeight}};">
+  <ng-include src=" 'includes/navbar.html' "></ng-include>
+    <header class="top-page">
+      <center>
+        <img src="images/logo/logo-1.png">
+      </center>
+      <h1 class="header-title">Welkom op Wikikikker</h1>
+      <p>Het platform over kikkers</p>
+      <hr>
+      {{ThumbnailsData["thumbnails"][0]}}
+    </header>
+    <grid-layout class="container-fluid">
+      <center>
+      <div class="row justify-content-md-center tablet news-tablet">
+        <h1 class="col-xl-12 part-head">Nieuws</h1>
+        <div ng-repeat="num in newsData" class="col-xl-2 fraction" ng-model="newsFraction" style="margin:10px;background-color:{{setColor(this)}};">
+          <span class="news-title" style="margin-left:0px;" ng-bind="num"></span>
+          <span class="news-info">This is gonna be the place where the text is going to be settled down.</span>
+        </div>
+      </div>
+      <div class="row justify-content-md-center tablet videos-tablet">
+        <h1 class="col-xl-12 part-head">Video's</h1>
+          <img ng-click="GoToVid()" ng-repeat="(val, key) in ThumbnailsData" class="thumb-img" alt="{{key['alt']}}" title="{{key['title']}}" ng-if="val < 12" ng-src="https://img.youtube.com/vi/{{key['vid-id']}}/mqdefault.jpg">
+      </div>
+      <div class="row justify-content-md-center tablet fotos-tablet">
+        <h1 class="col-xl-12 part-head">Foto's</h1>
+      </div>
+      <div class="row justify-content-md-center tablet quiz-tablet">
+        <h1 class="col-xl-12 part-head">Quiz</h1>
+      </div>
+    </center>
+    </grid-layout>
+  <ng-include src=" 'includes/footer.html' "></ng-include>
+  <script type="text/javascript" src="js/index.js" async></script>
+</body>
+</html>

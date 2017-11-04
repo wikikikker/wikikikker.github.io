@@ -1,0 +1,128 @@
+body{
+  background-color:rgb(200,250,200);
+}
+footer{
+  font-family:arial,helvetica,sans-serif;
+  font-size:14px;
+  font-weight:bold;
+  color:black;
+  position:absolute;
+  left:0px;
+  width:100%;
+  padding:25px 0 25px 0;
+  background-color:rgb(250,250,250);
+}
+
+footer > span{
+  padding-left:20px;
+}
+
+hr {
+  border-color:#666;
+  width:80%;
+}
+
+grid-layout .fraction{
+  height:200px;
+  overflow:hidden;
+  color:rgb(125,25,25);
+  background-color:rgb(10,100,255);
+  background-image:url("/wikikikker/images/news-fraction.png");
+  cursor:pointer;
+  transition:background-color .4s linear;
+}
+
+.tablet{
+  width:80%;
+  padding:10px 0px 10px 0px;
+}
+
+.thumb-img {
+  margin:4px;
+  padding:0px;
+  cursor:pointer;
+  border:2px solid #666;
+  border-radius:2px;
+}
+
+.news-tablet {
+  background-color:rgba(255,50,50,0.9);
+  border-radius:4.5px 4.5px 0px 0px;
+}
+
+.videos-tablet{
+  background-color:rgba(50,50,50,0.9);
+}
+
+.fotos-tablet {
+  background-color:rgba(50,150,255,0.9);
+  height:1000px;
+}
+
+.quiz-tablet {
+  background-color:rgba(100,0,100,0.9);
+  height:1000px;
+}
+
+.part-head{
+  color:rgb(200,250,200);
+}
+
+.news-title{
+  padding:5px;
+  display:inline-block;
+  font-size:18px;
+  transition:all .5s linear;
+}
+
+.news-info{
+  display:inline-block;
+  transition:all .5s linear;
+  padding:5px;
+  margin-top:200px;
+}
+
+grid-layout .fraction:hover{
+  background-color:rgb(255,50,50);
+  color:rgb(200,250,200);
+}
+
+.header-title{
+  font-family:Roboto;
+}
+
+header.top-page{
+  display:inline-block;
+  text-align:center;
+  font-size:24px;
+  position:relative;
+  width:100%;
+  padding:10px 0px 10px 0px;
+}
+
+.active{
+  background-color:#ddd;
+  color:#666;
+}
+
+body{
+  overflow-y:scroll;
+}
+
+body::-webkit-scrollbar-track{
+  border-radius:10px;
+  background-color:rgba(166,166,166,0.7);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+	background-color: #666;
+  border:1px solid #aaa;
+}
+
+body::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
